@@ -126,3 +126,12 @@ szwagier(X, Y) :- zona(Z, Y),
 
 szwagier(X, Y) :- maz(Z, Y),
                   siostra(X, Z).
+
+% Uzgadnianie (unifikacja)
+% p(X, f(X)) = p(Y,X).
+% metapredykat unify_with_occurs_chech() - wykrywanie cykli
+
+% Niejawne uzgodnienie
+
+regularny(rectangle(point(X1, Y1), point(X2, Y1), point(X2, Y2), point(X1, Y2))).
+% Zapytanie: regularny(rectangle(point(1, 1), point(5, 1), point(5, 5), point(1, 5))).
